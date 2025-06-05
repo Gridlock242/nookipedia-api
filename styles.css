@@ -11,8 +11,13 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: #d5ebd4;
-  padding: 0.5em 0em 0.5em 0em;
+  padding: 0.5em 1em 0.5em 1em;
   color: #63a381;
+}
+
+header img {
+  height: 2rem;
+  width: 2rem;
 }
 
 header ul {
@@ -50,26 +55,97 @@ nav ul li {
   gap: 1rem;
   padding: 1rem;
   justify-content: center;
-  margin: 0rem 8rem 0rem 8rem;
 }
+
+/* GESTION DES CARTES */
 
 .card {
   background-color: #fff;
   border-radius: 10px;
-  padding: 1rem;
   text-align: center;
-  width: 150px;
   padding: 5px;
   overflow: hidden;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  box-shadow: rgba(24, 199, 184, 0.2) 0px 7px 20px 0px;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.card {
+  width: 320px;
+  background: #ffffff;
+  color: #60a0d6;
+  position: relative;
+  border-radius: 2.5em;
+  padding: 2em;
+  transition: transform 0.4s ease;
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5em;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.card .card-top, .card .card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .card-top p, .card .card-top .card-title, .card .card-bottom p, .card .card-bottom .card-title {
+  margin: 0;
+}
+
+.card .card-title {
+  font-weight: bold;
+}
+
+.card .card-top p, .card .card-bottom p {
+  font-weight: 600;
+}
+
+.card .card-bottom {
+  align-items: flex-end;
+}
+
+.card .card-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.card .card-image svg {
+  width: 4em;
+  height: 4em;
+  transition: transform 0.4s ease;
+}
+
 .card:hover {
+  cursor: pointer;
+  transform: scale(0.97);
+}
+
+.card:hover .card-content {
+  transform: scale(0.96);
+}
+
+.card:hover .card-image svg {
   transform: scale(1.05);
 }
 
+.card:active {
+  transform: scale(0.9);
+}
+
 .cardImg {
-  width: 100%;
-  border-radius: 50%;
+   width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: 0.3s;
 }

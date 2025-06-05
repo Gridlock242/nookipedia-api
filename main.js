@@ -36,6 +36,9 @@ function displayVillagers(villagers, container) {
     const name = document.createElement('h3');
     name.textContent = villager.name;
 
+    const species = document.createElement('p');
+    species.textContent = villager.species;
+
     card.appendChild(image);
     card.appendChild(name);
     container.appendChild(card);

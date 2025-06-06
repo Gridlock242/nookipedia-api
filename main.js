@@ -43,6 +43,8 @@ function displayVillagers(villagers, container) {
     card.appendChild(name);
     container.appendChild(card);
   }
+
+  
 }
 
 

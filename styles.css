@@ -32,7 +32,24 @@ body {
 }
 
 nav {
+  display: flex;
+  justify-content: space-around;
   padding-top: 1rem;
+}
+
+nav input {
+  border-radius: 10px;
+  outline: 2px solid #97d2e2;
+  border: 0;
+  background-color: #ffffff;
+  outline-offset: 1px;
+  padding: 10px 1rem;
+  transition: 0.25s;
+}
+
+.input:focus {
+  outline-offset: 2px;
+  background-color: #fff
 }
 
 nav ul {
@@ -56,6 +73,7 @@ nav ul li {
   padding: 1rem;
   justify-content: center;
 }
+
 
 /* GESTION DES CARTES */
 
@@ -97,33 +115,8 @@ nav ul li {
   margin: 0;
 }
 
-.card .card-title {
-  font-weight: bold;
-}
-
-.card .card-top p, .card .card-bottom p {
-  font-weight: 600;
-}
-
 .card .card-bottom {
   align-items: flex-end;
-}
-
-.card .card-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: grid;
-  place-items: center;
-  pointer-events: none;
-}
-
-.card .card-image svg {
-  width: 4em;
-  height: 4em;
-  transition: transform 0.4s ease;
 }
 
 .card:hover {
@@ -133,10 +126,6 @@ nav ul li {
 
 .card:hover .card-content {
   transform: scale(0.96);
-}
-
-.card:hover .card-image svg {
-  transform: scale(1.05);
 }
 
 .card:active {
